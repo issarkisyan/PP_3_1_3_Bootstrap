@@ -47,11 +47,7 @@ public class UserServiceImp implements UserService, UserDetailsService {
         this.userDao.createUser(user);
         return null;
     }
-    @Transactional
-    public Object createRole(Role role) {
-        this.userDao.createRole(role);
-        return null;
-    }
+
 /*
     @Transactional
     public Object addToCommonTable(User user,Role role) {
@@ -66,8 +62,8 @@ public class UserServiceImp implements UserService, UserDetailsService {
         return this.userDao.readListUsers();
     }
     @Transactional
-    public void update(long id, User updatedUser) {
-        this.userDao.update(id, updatedUser);
+    public void update(User updatedUser) {
+        this.userDao.update(updatedUser);
     }
     @Transactional
     public void delete(long id) {

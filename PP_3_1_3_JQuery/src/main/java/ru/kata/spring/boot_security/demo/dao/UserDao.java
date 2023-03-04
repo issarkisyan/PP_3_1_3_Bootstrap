@@ -10,8 +10,6 @@ import java.util.List;
 
 public interface UserDao {
     void createUser(User user);
-
-    void createRole(Role role);
 /*
     void addToCommonTable(User user,Role role);
 */
@@ -19,7 +17,7 @@ public interface UserDao {
 
     List<User> readListUsers();
 
-    void update(long id, User updatedUser);
+    void update(User updatedUser);
 
     void delete(long id);
 
