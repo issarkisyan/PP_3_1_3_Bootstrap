@@ -17,9 +17,6 @@ public interface UserService {
 
     Object createUser(User user);
 
-/*
-    Object addToCommonTable(User user,Role role);
-*/
     List<User> readListUsers();
 
     void update(User updatedUser);

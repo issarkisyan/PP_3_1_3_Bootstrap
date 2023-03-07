@@ -48,15 +48,6 @@ public class UserServiceImp implements UserService, UserDetailsService {
         return null;
     }
 
-/*
-    @Transactional
-    public Object addToCommonTable(User user,Role role) {
-        this.userDao.addToCommonTable(user,role);
-        return null;
-    }
-
- */
-
     @Transactional(readOnly = true)
     public List<User> readListUsers() {
         return this.userDao.readListUsers();

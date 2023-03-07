@@ -32,30 +32,7 @@ public class AdminController {
         model.addAttribute("users", userService.readListUsers());
         return "admin/index";
     }
-/*
-    @GetMapping("/{id}")
-    public String show(@PathVariable("id") long id, Model model) {
-        model.addAttribute("user", userService.show(id));
-        return "admin/show";
-    }
 
- */
-/*
-, Principal principal, User userAdm
-
-    @GetMapping("/new")
-    public String newUser(@ModelAttribute("user") User user) {
-        return "admin/new";
-    }
-
-    //Это точно неправильно
-    @GetMapping()
-    public String newUser(@ModelAttribute("user") User user) {
-    return ;
-
-    "redirect:/templates/admin"
-    }
- */
     @PostMapping()
     public String create (@ModelAttribute("user") User user, @ModelAttribute("role") Role role) {
         userService.createUser(user);
